@@ -46,11 +46,11 @@ public final class SpawnersPlus extends JavaPlugin {
     @Override
     public void onEnable() {
         saveDefaultConfig();
-        typeKey = storageKey("type");
-        countKey = storageKey("count");
-        balanceKey = storageKey("balance");
-        remainderKey = storageKey("remainder");
-        capacityKey = storageKey("capacity");
+        typeKey = new NamespacedKey(this, "type");
+        countKey = new NamespacedKey(this, "count");
+        balanceKey = new NamespacedKey(this, "balance");
+        remainderKey = new NamespacedKey(this, "remainder");
+        capacityKey = new NamespacedKey(this, "capacity");
         try {
             text = new SpawnerText(getConfig());
             maxStack = getConfig().getInt("max-stack");
@@ -95,11 +95,6 @@ public final class SpawnersPlus extends JavaPlugin {
             for (var chunk : world.getLoadedChunks()) load(chunk.getTileEntities());
         }
         getServer().getScheduler().runTaskTimer(this, this::tick, 20, 20);
-    }
-
-    private static NamespacedKey storageKey(String name) {
-        // keep the saved keys when the plugin name changes
-        return new NamespacedKey("spawnerplusplus", name);
     }
 
     @Override

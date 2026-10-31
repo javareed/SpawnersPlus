@@ -12,6 +12,4 @@ SpawnersPlus 1.5.1 stacks spawners into shared money generators on Paper 1.21.11
 
 Add and remove default to 1. Admin commands require `spawnersplus.admin`; spawner interactions require `spawnersplus.use`.
 
-When updating an existing server, move its config into `plugins/SpawnersPlus/` and update permission assignments.
-
 Build: `mvn -B -ntp verify`
