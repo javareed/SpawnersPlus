@@ -1,0 +1,17 @@
+name: SpawnerPlusPlus
+prefix: 'Spawner++'
+version: 1.5.1
+main: dev.reed.spawners.SpawnerPlusPlus
+api-version: '1.21.11'
+depend: [Vault]
+description: Stack spawners and collect money instead of spawning mobs.
+commands:
+  spawners:
+    description: Give spawners or edit the spawner you are looking at.
+    usage: /spawners
+    aliases: [spawnerplusplus]
+permissions:
+  spawnerplusplus.use:
+    default: true
+  spawnerplusplus.admin:
+    default: op

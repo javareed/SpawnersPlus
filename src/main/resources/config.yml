@@ -1,0 +1,51 @@
+max-stack: 64
+max-stored-money: 1000000
+default-income-per-minute: 10
+capacity-upgrades:
+  128: 2500
+  256: 10000
+  512: 25000
+income-per-minute:
+  PIG: 10
+  COW: 15
+  ZOMBIE: 20
+  SKELETON: 20
+  IRON_GOLEM: 50
+
+style:
+  small-caps: true
+  accent: '#8fb8ff'
+  text: '#d0d6e0'
+  error: '#e58b91'
+
+messages:
+  no-permission: "You can't do that"
+  stack-full: 'This spawner is full'
+  stacked: 'Added {0} spawners ({1}/{2})'
+  save-failed: "Couldn't save the spawner"
+  silk-required: 'You need a Silk Touch pickaxe'
+  unknown-type: "Couldn't read the mob type"
+  nothing-to-collect: 'Nothing to collect'
+  collected: 'Collected {0}'
+  economy-unavailable: 'The economy is unavailable right now'
+  account-unavailable: "Couldn't open your account"
+  payout-failed: "Couldn't pay you right now"
+  payout-check: 'Ask an admin to check this payment'
+  help: 'Right-click a spawner to open it'
+  usage: 'Use {0}'
+  player-offline: "That player isn't online"
+  given: 'Gave {0} {1} spawners to {2}'
+  invalid-give: 'Choose a mob and an amount from 1 to {0}'
+  place-upgraded: 'Place upgraded spawners separately'
+  upgrade-funds: 'You need {0} to upgrade this spawner'
+  upgrade-failed: 'Upgrade payment failed'
+  upgrade-refunded: "Couldn't save the upgrade so your payment was returned"
+  upgraded: 'This spawner can now hold {0} spawners'
+  players-only: 'Run this in game'
+  invalid-amount: 'Choose an amount from {0} to {1}'
+  look-at-spawner: 'Look at a spawner'
+  spawner-busy: 'Wait for the upgrade to finish'
+  not-enough-spawners: 'This stack only has {0} spawners'
+  capacity-limit: 'This spawner only holds {0}'
+  spawner-removed: 'Removed the spawner'
+  count-set: '{0} spawner set to {1}/{2}'
