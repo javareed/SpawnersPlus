@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>dev.reed</groupId>
-    <artifactId>SpawnerPlusPlus</artifactId>
+    <artifactId>SpawnersPlus</artifactId>
     <version>1.5.1</version>
 
     <properties>
@@ -46,7 +46,7 @@
     </dependencies>
 
     <build>
-        <finalName>Spawner++-${project.version}</finalName>
+        <finalName>SpawnersPlus-${project.version}</finalName>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>

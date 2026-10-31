@@ -24,7 +24,7 @@ import org.bukkit.inventory.ItemStack;
 import org.bukkit.persistence.PersistentDataType;
 import org.bukkit.plugin.java.JavaPlugin;
 
-public final class SpawnerPlusPlus extends JavaPlugin {
+public final class SpawnersPlus extends JavaPlugin {
     static final int MAX_AMOUNT = 10_000;
     // cents per minute per spawner
     static final long MAX_RATE = 100_000_000;
@@ -46,11 +46,11 @@ public final class SpawnerPlusPlus extends JavaPlugin {
     @Override
     public void onEnable() {
         saveDefaultConfig();
-        typeKey = new NamespacedKey(this, "type");
-        countKey = new NamespacedKey(this, "count");
-        balanceKey = new NamespacedKey(this, "balance");
-        remainderKey = new NamespacedKey(this, "remainder");
-        capacityKey = new NamespacedKey(this, "capacity");
+        typeKey = storageKey("type");
+        countKey = storageKey("count");
+        balanceKey = storageKey("balance");
+        remainderKey = storageKey("remainder");
+        capacityKey = storageKey("capacity");
         try {
             text = new SpawnerText(getConfig());
             maxStack = getConfig().getInt("max-stack");
@@ -95,6 +95,11 @@ public final class SpawnerPlusPlus extends JavaPlugin {
             for (var chunk : world.getLoadedChunks()) load(chunk.getTileEntities());
         }
         getServer().getScheduler().runTaskTimer(this, this::tick, 20, 20);
+    }
+
+    private static NamespacedKey storageKey(String name) {
+        // keep the saved keys when the plugin name changes
+        return new NamespacedKey("spawnerplusplus", name);
     }
 
     @Override
@@ -163,7 +168,7 @@ public final class SpawnerPlusPlus extends JavaPlugin {
     }
 
     boolean canUse(Player p) {
-        return p.hasPermission("spawnerplusplus.use");
+        return p.hasPermission("spawnersplus.use");
     }
 
     static boolean spawnable(EntityType type) {

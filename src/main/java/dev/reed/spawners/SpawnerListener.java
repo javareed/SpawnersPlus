@@ -31,9 +31,9 @@ import org.bukkit.inventory.EquipmentSlot;
 import org.bukkit.inventory.ItemStack;
 
 final class SpawnerListener implements Listener {
-    private final SpawnerPlusPlus plugin;
+    private final SpawnersPlus plugin;
 
-    SpawnerListener(SpawnerPlusPlus plugin) {
+    SpawnerListener(SpawnersPlus plugin) {
         this.plugin = plugin;
     }
 

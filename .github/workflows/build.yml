@@ -19,5 +19,5 @@ jobs:
         run: mvn -B -ntp verify
       - uses: actions/upload-artifact@v7.0.2
         with:
-          name: Spawner++
-          path: target/Spawner++-*.jar
+          name: SpawnersPlus
+          path: target/SpawnersPlus-*.jar

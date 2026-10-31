@@ -14,17 +14,17 @@ final class SpawnerMenu implements InventoryHolder {
     static final int MIDDLE_SLOT = 13;
     static final int RIGHT_SLOT = 16;
 
-    final SpawnerPlusPlus plugin;
+    final SpawnersPlus plugin;
     final MoneySpawner spawner;
     final boolean upgrades;
     boolean purchased;
     private final Inventory inventory;
 
-    SpawnerMenu(SpawnerPlusPlus plugin, MoneySpawner spawner) {
+    SpawnerMenu(SpawnersPlus plugin, MoneySpawner spawner) {
         this(plugin, spawner, false);
     }
 
-    SpawnerMenu(SpawnerPlusPlus plugin, MoneySpawner spawner, boolean upgrades) {
+    SpawnerMenu(SpawnersPlus plugin, MoneySpawner spawner, boolean upgrades) {
         this.plugin = plugin;
         this.spawner = spawner;
         this.upgrades = upgrades;

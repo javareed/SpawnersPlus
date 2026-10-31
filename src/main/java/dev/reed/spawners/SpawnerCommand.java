@@ -14,16 +14,16 @@ import org.bukkit.entity.EntityType;
 import org.bukkit.entity.Player;
 import org.bukkit.inventory.ItemStack;
 
-import static dev.reed.spawners.SpawnerPlusPlus.MAX_AMOUNT;
-import static dev.reed.spawners.SpawnerPlusPlus.parseType;
-import static dev.reed.spawners.SpawnerPlusPlus.spawnable;
+import static dev.reed.spawners.SpawnersPlus.MAX_AMOUNT;
+import static dev.reed.spawners.SpawnersPlus.parseType;
+import static dev.reed.spawners.SpawnersPlus.spawnable;
 
 final class SpawnerCommand implements TabExecutor {
-    private static final String ADMIN = "spawnerplusplus.admin";
+    private static final String ADMIN = "spawnersplus.admin";
     private static final List<String> EDITS = List.of("add", "remove", "set");
-    private final SpawnerPlusPlus plugin;
+    private final SpawnersPlus plugin;
 
-    SpawnerCommand(SpawnerPlusPlus plugin) {
+    SpawnerCommand(SpawnersPlus plugin) {
         this.plugin = plugin;
     }
 
